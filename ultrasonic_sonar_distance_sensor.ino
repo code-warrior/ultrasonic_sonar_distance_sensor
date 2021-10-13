@@ -45,8 +45,6 @@ void loop() {
   static unsigned long t1;
   static unsigned long t2;
   static unsigned long pulse_width;
-  static float cm;
-  static float inches;
 
   // Hold the trigger pin high for at least 10 us
   digitalWrite(TRIGGER_PIN, HIGH);
@@ -65,20 +63,11 @@ void loop() {
   t2 = micros();
   pulse_width = t2 - t1;
 
-  // Calculate distance in centimeters and inches. The constants
-  // are found in the datasheet, and calculated from the assumed speed
-  // of sound in air at sea level (~340 m/s).
-  cm = pulse_width / 58.0;
-  inches = pulse_width / 148.0;
 
   // Print out results
   if ( pulse_width > MAXIMUM_MICROSECOND_PULSE ) {
     Serial.println("Out of range");
   } else {
-    Serial.print(cm);
-    Serial.print(" cm \t");
-    Serial.print(inches);
-    Serial.println(" in");
   }
 
   // Wait at least 60ms before next measurement
