@@ -22,10 +22,10 @@
 */
 
 // Pins
-#define TRIGGER_PIN 7
-#define ECHO_PIN 8
+#define TRIGGER_PIN               7
+#define ECHO_PIN                  8
 #define MAXIMUM_MICROSECOND_PULSE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
-#define BAUD_RATE 9600
+#define BAUD_RATE                 9600
 
 void setup() {
   // The Trigger pin will tell the sensor to range find
