@@ -24,7 +24,7 @@
 // Pins
 #define TRIGGER_PIN 7
 #define ECHO_PIN 8
-#define MAXIMUM_DISTANCE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
+#define MAXIMUM_MICROSECOND_PULSE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
 #define BAUD_RATE 9600
 
 void setup() {
@@ -71,7 +71,7 @@ void loop() {
   inches = pulse_width / 148.0;
 
   // Print out results
-  if ( pulse_width > MAXIMUM_DISTANCE ) {
+  if ( pulse_width > MAXIMUM_MICROSECOND_PULSE ) {
     Serial.println("Out of range");
   } else {
     Serial.print(cm);
