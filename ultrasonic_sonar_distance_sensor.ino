@@ -42,11 +42,11 @@ void setup() {
 }
 
 void loop() {
-  unsigned long t1;
-  unsigned long t2;
-  unsigned long pulse_width;
-  float cm;
-  float inches;
+  static unsigned long t1;
+  static unsigned long t2;
+  static unsigned long pulse_width;
+  static float cm;
+  static float inches;
 
   // Hold the trigger pin high for at least 10 us
   digitalWrite(TRIGGER_PIN, HIGH);
