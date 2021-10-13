@@ -25,6 +25,7 @@
 #define TRIGGER_PIN 7
 #define ECHO_PIN 8
 #define MAXIMUM_DISTANCE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
+#define BAUD_RATE 9600
 
 void setup() {
   // The Trigger pin will tell the sensor to range find
@@ -36,7 +37,7 @@ void setup() {
   pinMode(ECHO_PIN, INPUT);
 
   // We'll use the serial monitor to view the sensor output
-  Serial.begin(9600);
+  Serial.begin(BAUD_RATE);
 }
 
 void loop() {
