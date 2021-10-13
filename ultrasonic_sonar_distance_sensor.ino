@@ -24,7 +24,7 @@
 // Pins
 #define TRIGGER_PIN 7
 #define ECHO_PIN 8
-#define MAX_DIST 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
+#define MAXIMUM_DISTANCE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
 
 void setup() {
   // The Trigger pin will tell the sensor to range find
@@ -68,7 +68,7 @@ void loop() {
   inches = pulse_width / 148.0;
 
   // Print out results
-  if ( pulse_width > MAX_DIST ) {
+  if ( pulse_width > MAXIMUM_DISTANCE ) {
     Serial.println("Out of range");
   } else {
     Serial.print(cm);
