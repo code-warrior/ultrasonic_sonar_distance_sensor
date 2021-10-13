@@ -53,12 +53,14 @@ void loop() {
   digitalWrite(TRIGGER_PIN, LOW);
 
   // Wait for pulse on echo pin
-  while ( digitalRead(ECHO_PIN) == 0 );
+  while (0 == digitalRead(ECHO_PIN))
+    ;
 
   // Measure how long the echo pin was held high (pulse width)
   // Note: the micros() counter will overflow after ~70 min
   t1 = micros();
-  while ( digitalRead(ECHO_PIN) == 1);
+  while (1 == digitalRead(ECHO_PIN))
+    ;
   t2 = micros();
   pulse_width = t2 - t1;
 
