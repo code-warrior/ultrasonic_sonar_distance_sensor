@@ -28,15 +28,16 @@
 #define BAUD_RATE                 9600
 
 void setup() {
-  // The Trigger pin will tell the sensor to range find
+  // The trigger pin, connected to the left distance sensor if you’re facing the
+  // front of the sensor, will send the 40kHz ultrasonic wave.
   pinMode(TRIGGER_PIN, OUTPUT);
-  digitalWrite(TRIGGER_PIN, LOW);
-
-  // Set Echo pin as input to measure the duration of
-  // pulses coming back from the distance sensor
+  // The echo pin, connected to the right sensor, senses for the echo of the
+  // 40kHz wave sent by the trigger sensor.
   pinMode(ECHO_PIN, INPUT);
 
-  // We'll use the serial monitor to view the sensor output
+  // Initialize the trigger pin to be low, or off.
+  digitalWrite(TRIGGER_PIN, LOW);
+
   Serial.begin(BAUD_RATE);
 }
 
