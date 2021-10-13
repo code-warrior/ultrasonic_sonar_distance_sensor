@@ -22,14 +22,11 @@
 */
 
 // Pins
-const int TRIG_PIN = 7;
-const int ECHO_PIN = 8;
-
-// Anything over 400 cm (23200 us pulse) is "out of range"
-const unsigned int MAX_DIST = 23200;
+#define TRIG_PIN 7
+#define ECHO_PIN 8
+#define MAX_DIST 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
 
 void setup() {
-
   // The Trigger pin will tell the sensor to range find
   pinMode(TRIG_PIN, OUTPUT);
   digitalWrite(TRIG_PIN, LOW);
