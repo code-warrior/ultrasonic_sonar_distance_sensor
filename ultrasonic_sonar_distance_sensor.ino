@@ -64,7 +64,6 @@ void loop() {
   pulse_width = t2 - t1;
 
 
-  // Print out results
   if ( pulse_width > MAXIMUM_MICROSECOND_PULSE ) {
     Serial.println("Out of range");
   } else {
