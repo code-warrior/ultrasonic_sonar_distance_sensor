@@ -22,14 +22,14 @@
 */
 
 // Pins
-#define TRIG_PIN 7
+#define TRIGGER_PIN 7
 #define ECHO_PIN 8
 #define MAX_DIST 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
 
 void setup() {
   // The Trigger pin will tell the sensor to range find
-  pinMode(TRIG_PIN, OUTPUT);
-  digitalWrite(TRIG_PIN, LOW);
+  pinMode(TRIGGER_PIN, OUTPUT);
+  digitalWrite(TRIGGER_PIN, LOW);
 
   // Set Echo pin as input to measure the duration of
   // pulses coming back from the distance sensor
@@ -47,9 +47,9 @@ void loop() {
   float inches;
 
   // Hold the trigger pin high for at least 10 us
-  digitalWrite(TRIG_PIN, HIGH);
+  digitalWrite(TRIGGER_PIN, HIGH);
   delayMicroseconds(10);
-  digitalWrite(TRIG_PIN, LOW);
+  digitalWrite(TRIGGER_PIN, LOW);
 
   // Wait for pulse on echo pin
   while ( digitalRead(ECHO_PIN) == 0 );
