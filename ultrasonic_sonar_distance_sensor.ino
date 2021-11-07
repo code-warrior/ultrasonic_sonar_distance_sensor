@@ -1,7 +1,40 @@
 /**
-   HC-SR04 Demo
-   Demonstration of the HC-SR04 Ultrasonic Sensor
-   Date: August 3, 2016
+ *
+ * HC-SR04 Ultrasonic Sonar Distance Sensor Demo
+ *
+ * The HC-SR04 ultrasonic sonar distance sensor, sometimes referred to simply as a
+ * distance sensor, transmits eight 40 kHz sound waves out its left speaker (marked
+ * “T” for trigger), then calculates how long it takes for those eight sound waves to
+ * bounce back to its right speaker (marked “R”, likely for receive). The longer it
+ * takes for the sound wave to bounce back, the farther an object is from the sensor.
+ *
+ * DISTANCE:
+ *   Minimum  |   Maximum
+ *   -----------|-------------
+ *   .75" (2cm) | 13'1.5" (4m)
+ *
+ * CONNECTIONS:
+ *   Arduino | HC-SR04
+ *   --------|---------
+ *     5V    |   VCC
+ *     7     |   Trig
+ *     8     |   Echo
+ *     GND   |   GND
+ *
+ * Notes:
+ *   1. In order to get the best readings, the area surrounding the sensor should be
+ *      unobstructed, or the sensor should be mounted on a smooth plane.
+ *   2. The pins listed above, under CONNECTIONS, refer to Arduino’s digital pins.
+ *
+ * This update: 7 November 2021
+ * Roy Vanegas
+ *
+ * Original Code: https://github.com/sparkfun/HC-SR04_UltrasonicSensor
+ * Date: August 3, 2016
+ *
+ * License:
+ *   Public Domain
+ **/
 
    Description:
     Connect the ultrasonic sensor to the Arduino as per the
