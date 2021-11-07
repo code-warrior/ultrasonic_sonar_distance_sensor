@@ -79,6 +79,8 @@ void loop() {
   static unsigned long pulse_start;
   static unsigned long pulse_end;
   static unsigned long pulse_width;
+  static float distance_in_centimeters;
+  static float distance_in_inches;
 
   // Hold the trigger pin high for 10 microseconds
   digitalWrite(TRIGGER_PIN, HIGH);
@@ -100,10 +102,17 @@ void loop() {
   while (1 == digitalRead(ECHO_PIN))
     ;
 
+  distance_in_centimeters = (pulse_width / 58.0);
+  distance_in_inches = (pulse_width / 148.0);
 
   if ( pulse_width > MAXIMUM_MICROSECOND_PULSE ) {
     Serial.println("Out of range");
   } else {
+    Serial.print("Object is ");
+    Serial.print(distance_in_inches);
+    Serial.print("\" (");
+    Serial.print(distance_in_centimeters);
+    Serial.println("cm) from sensor.");
   }
 
   delay(60); // Wait at least 60 milliseconds before next measurement
