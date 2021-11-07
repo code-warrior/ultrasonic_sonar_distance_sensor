@@ -107,6 +107,9 @@ void loop() {
   pulse_start = micros();
   while (1 == digitalRead(ECHO_PIN))
     ;
+  pulse_end = micros();
+
+  pulse_width = pulse_end - pulse_start;
 
   distance_in_centimeters = (pulse_width / 58.0);
   distance_in_inches = (pulse_width / 148.0);
