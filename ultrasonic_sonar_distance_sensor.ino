@@ -114,8 +114,8 @@ void loop() {
   distance_in_centimeters = (pulse_width / 58.0);
   distance_in_inches = (pulse_width / 148.0);
 
-  if ( pulse_width > MAXIMUM_MICROSECOND_PULSE ) {
     Serial.println("Out of range");
+  if (pulse_width > MAXIMUM_MICROSECOND_PULSE) {
   } else {
     Serial.print("Object is ");
     Serial.print(distance_in_inches);
