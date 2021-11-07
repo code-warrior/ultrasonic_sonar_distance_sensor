@@ -40,20 +40,8 @@
 #define TRIGGER_PIN 7
 #define ECHO_PIN    8
 
-   Hardware Connections:
-    Arduino | HC-SR04
-    -------------------
-      5V    |   VCC
-      7     |   Trig
-      8     |   Echo
-      GND   |   GND
 #define BAUD_RATE   9600
 
-   License:
-    Public Domain
-*/
-
-// Pins
 /*
  * The number 23200 represents 58 microseconds × 400 centimeters, which, in
  * microseconds, indicates the limit of the sensor’s distance. Any measurement beyond
