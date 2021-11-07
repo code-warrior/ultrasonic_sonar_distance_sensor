@@ -36,11 +36,6 @@
  *   Public Domain
  **/
 
-   Description:
-    Connect the ultrasonic sensor to the Arduino as per the
-    hardware connections below. Run the sketch and open a serial
-    monitor. The distance read from the sensor will be displayed
-    in centimeters and inches.
 
    Hardware Connections:
     Arduino | HC-SR04
