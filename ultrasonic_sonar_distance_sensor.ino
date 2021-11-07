@@ -36,6 +36,9 @@
  *   Public Domain
  **/
 
+// Sensor Pins
+#define TRIGGER_PIN 7
+#define ECHO_PIN    8
 
    Hardware Connections:
     Arduino | HC-SR04
@@ -51,8 +54,6 @@
 
 // Pins
 #define BAUD_RATE                 9600
-#define TRIGGER_PIN               7
-#define ECHO_PIN                  8
 #define MAXIMUM_MICROSECOND_PULSE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
 
 void setup() {
