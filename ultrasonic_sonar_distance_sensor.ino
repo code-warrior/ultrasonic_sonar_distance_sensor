@@ -54,7 +54,13 @@
 */
 
 // Pins
-#define MAXIMUM_MICROSECOND_PULSE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
+/*
+ * The number 23200 represents 58 microseconds × 400 centimeters, which, in
+ * microseconds, indicates the limit of the sensor’s distance. Any measurement beyond
+ * this indicates that the object detected is “out of range”.(400 centimeters,
+ * incidentally, is 13'1.5".)
+ */
+#define MAXIMUM_MICROSECOND_PULSE 23200
 
 void setup() {
   /**
