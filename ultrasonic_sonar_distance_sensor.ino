@@ -51,7 +51,7 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(TRIGGER_PIN, LOW);
 
-  // Wait for pulse on echo pin
+  // Wait until a value is read on the echo pin (that is, a pulse occurs)
   while (0 == digitalRead(ECHO_PIN))
     ;
 
