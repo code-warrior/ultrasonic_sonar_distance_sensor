@@ -47,13 +47,13 @@
       7     |   Trig
       8     |   Echo
       GND   |   GND
+#define BAUD_RATE   9600
 
    License:
     Public Domain
 */
 
 // Pins
-#define BAUD_RATE                 9600
 #define MAXIMUM_MICROSECOND_PULSE 23200 // Anything over 400 cm (23200 us pulse) is "out of range"
 
 void setup() {
