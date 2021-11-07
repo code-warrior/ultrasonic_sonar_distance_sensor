@@ -69,6 +69,5 @@ void loop() {
   } else {
   }
 
-  // Wait at least 60ms before next measurement
-  delay(60);
+  delay(60); // Wait at least 60 milliseconds before next measurement
 }
