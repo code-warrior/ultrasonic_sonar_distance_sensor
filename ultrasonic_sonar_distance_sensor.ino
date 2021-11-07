@@ -75,8 +75,8 @@ void setup() {
 }
 
 void loop() {
-  static unsigned long t1;
-  static unsigned long t2;
+  static unsigned long pulse_start;
+  static unsigned long pulse_end;
   static unsigned long pulse_width;
 
   // Hold the trigger pin high for 10 microseconds
@@ -91,15 +91,13 @@ void loop() {
   while (0 == digitalRead(ECHO_PIN))
     ;
 
-  t1 = micros();
   /**
    * Measure how long the echo, or receive, pin was held high (pulse width).
    * Note: the micros() counter will overflow after about 70 minutes.
    */
+  pulse_start = micros();
   while (1 == digitalRead(ECHO_PIN))
     ;
-  t2 = micros();
-  pulse_width = t2 - t1;
 
 
   if ( pulse_width > MAXIMUM_MICROSECOND_PULSE ) {
