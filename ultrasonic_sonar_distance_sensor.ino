@@ -1,5 +1,4 @@
-/**
- *
+/*
  * HC-SR04 Ultrasonic Sonar Distance Sensor Demo
  *
  * The HC-SR04 ultrasonic sonar distance sensor, sometimes referred to simply as a
@@ -51,13 +50,13 @@
 #define MAXIMUM_MICROSECOND_PULSE 23200
 
 void setup() {
-  /**
+  /*
    * The trigger pin, connected to the left transducer, if you’re facing the front of
    * the sensor, will send the 40kHz ultrasonic waves.
    */
   pinMode(TRIGGER_PIN, OUTPUT);
 
-  /**
+  /*
    * The echo pin, connected to the right transducer, senses for the echo of the
    * 40kHz sound waves sent by the trigger transducer.
    */
@@ -81,14 +80,14 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(TRIGGER_PIN, LOW);
 
-  /**
+  /*
    * Wait until a value is read on the echo pin (that is, a pulse occurs). Once a
    * value is read, we can proceed to measure the pulse width below.
    */
   while (0 == digitalRead(ECHO_PIN))
     ;
 
-  /**
+  /*
    * Measure how long the echo, or receive, pin was held high (pulse width).
    * Note: the micros() counter will overflow after about 70 minutes.
    */
