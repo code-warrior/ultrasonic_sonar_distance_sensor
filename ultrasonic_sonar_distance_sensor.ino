@@ -37,7 +37,6 @@
 
 #define TRIGGER_PIN 7
 #define ECHO_PIN    8
-
 #define BAUD_RATE   9600
 
 /*
