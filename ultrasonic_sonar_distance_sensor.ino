@@ -33,7 +33,7 @@
  *
  * License:
  *   Public Domain
- **/
+ */
 
 // Sensor Pins
 #define TRIGGER_PIN 7
