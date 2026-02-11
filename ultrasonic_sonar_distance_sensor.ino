@@ -35,7 +35,6 @@
  *   Public Domain
  */
 
-// Sensor Pins
 #define TRIGGER_PIN 7
 #define ECHO_PIN    8
 
