@@ -2,13 +2,14 @@
  * HC-SR04 Ultrasonic Sonar Distance Sensor Demo
  *
  * The HC-SR04 ultrasonic sonar distance sensor, sometimes referred to simply as a
- * distance sensor, transmits eight 40 kHz sound waves out its left speaker (marked
- * “T” for trigger), then calculates how long it takes for those eight sound waves to
- * bounce back to its right speaker (marked “R”, likely for receive). The longer it
- * takes for the sound wave to bounce back, the farther an object is from the sensor.
+ * distance sensor, transmits eight 40 kHz sound waves out of its left speaker
+ * (marked “T” for trigger), then calculates how long it takes for those eight sound
+ * waves to bounce back to its right speaker (marked “R”, likely for receive). The
+ * longer it takes for the sound wave to bounce back, the farther an object is from
+ * the sensor.
  *
  * DISTANCE:
- *   Minimum  |   Maximum
+ *   Minimum    | Maximum
  *   -----------|-------------
  *   .75" (2cm) | 13'1.5" (4m)
  *
@@ -40,17 +41,18 @@
 #define BAUD_RATE   9600
 
 /*
- * The number 23200 represents 58 microseconds × 400 centimeters, which, in
- * microseconds, indicates the limit of the sensor’s distance. Any measurement beyond
- * this indicates that the object detected is “out of range”.(400 centimeters,
- * incidentally, is 13'1.5".)
+ * The number 23200 is the maximum distance in microseconds that the HC-SR04 can
+ * measure. This number is the result of multiplying 58 microseconds (per the
+ * datasheet, and likely the combined time for all eight 40 kHz sound waves to be
+ * triggered) by 400 centimeters: 58 µs × 400 cm = 23200 µs. Any measurement beyond
+ * 23200 indicates that the object detected is “out of range”.
  */
 #define MAXIMUM_MICROSECOND_PULSE 23200
 
 void setup() {
   /*
    * The trigger pin, connected to the left transducer, if you’re facing the front of
-   * the sensor, will send the 40kHz ultrasonic waves.
+   * the sensor, sends the 40kHz ultrasonic waves.
    */
   pinMode(TRIGGER_PIN, OUTPUT);
 
